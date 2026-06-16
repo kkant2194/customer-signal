@@ -1,0 +1,19 @@
+#product-feedback / Aisha: The new workspace filter in the feedback table is a big improvement. I can finally review one product area without noise from other workspaces.
+
+#sales-notes / Ben: Enterprise prospects keep asking whether saved reports can be exported for QBRs. This is becoming a repeated sales blocker.
+
+#support-escalations / Carmen: CSV imports are still confusing for customers who upload review exports. The mapping UI helps, but we need clearer empty states.
+
+#research / Diego: Interview participants liked seeing direct quotes in Ask AI. They said it made the answer feel more trustworthy.
+
+#customer-success / Hannah: A customer deleted a test workspace and expected all feedback and saved reports tied to it to disappear. They were worried when old rows still appeared.
+
+#product-feedback / Imran: The dashboard risk queue is useful, but it should explain why a signal is ranked as risky.
+
+#support-escalations / Jules: One user pasted Slack feedback and everything imported as neutral. They expected sentiment to be inferred automatically.
+
+#research / Kat: The app is useful for weekly synthesis. It saves me time when I need to turn interview notes into themes.
+
+#sales-notes / Leo: A buyer said metadata fields like country, app version, and verified purchase are critical for product review datasets.
+
+#product-feedback / Mina: The Ask AI response was too cautious when only two evidence items matched. That is better than hallucinating, but the UI should make the reason obvious.

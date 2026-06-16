@@ -1,0 +1,11 @@
+source,customer,feedback,sentiment,rating,plan
+App Store,Public review,"Push notifications fire for every comment even after I am no longer responsible for the project.",negative,2,Pro
+Intercom,Bluepeak,"Mobile search helps account teams find customer notes quickly before a meeting.",positive,4,Business
+Zendesk,Nimbus Labs,"The mobile app should let me mute a workspace for a week instead of disabling all notifications.",negative,2,Pro
+NPS,Riverdesk,"I like checking saved reports from my phone before roadmap meetings.",positive,5,Business
+App Store,Public review,"The app is useful, but table rows are hard to scan on a small screen.",neutral,3,Free
+Email,Brightline,"Our sales team wants direct links from mobile feedback items to the related report.",neutral,3,Business
+Intercom,Harbor Analytics,"Mobile filters should remember my last selected sentiment and plan.",neutral,3,Pro
+G2,Kite Retail,"The evidence panel is readable on tablet and helps during customer calls.",positive,4,Business
+Zendesk,CedarWorks,"Scrolling through long quotes on mobile feels slow when a report has many sources.",negative,2,Pro
+NPS,Atlas Finance,"The mobile summary is concise enough for executives who only need the main risk and action.",positive,5,Enterprise

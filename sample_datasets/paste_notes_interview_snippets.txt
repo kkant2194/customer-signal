@@ -1,0 +1,15 @@
+Beacon Health: The product team likes the evidence count, but legal reviewers need clearer source IDs before approving saved reports for leadership meetings.
+
+Northwind Capital: Workspace deletion must remove feedback, reports, and usage events because admins use test workspaces during onboarding.
+
+SummitCloud: The CSV import preview made the workflow feel safer, but the team still wants automatic suggestions for review body and rating columns.
+
+Aster Financial: Ask AI gave a good summary, but the PM wanted follow-up questions that separated enterprise risk from general usability issues.
+
+Rivergate Systems: The support team needs metadata filters for marketplace, app version, and verified purchase before importing external review data.
+
+HelioWorks: Prompt injection warnings are important because some imported feedback may include user-written instructions or malicious text.
+
+Bluebird Analytics: The new report dialog is easy to read and the recommended actions are useful for weekly roadmap planning.
+
+VectorLab: The team wants confidence levels on themes so they know when not to act on weak feedback evidence.

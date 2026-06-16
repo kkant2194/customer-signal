@@ -1,0 +1,40 @@
+{
+  "name": "customer-signal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "latest",
+    "@radix-ui/react-dropdown-menu": "latest",
+    "@radix-ui/react-label": "latest",
+    "@radix-ui/react-select": "latest",
+    "@radix-ui/react-slot": "latest",
+    "@radix-ui/react-tabs": "latest",
+    "@supabase/supabase-js": "^2.108.1",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "papaparse": "^5.5.3",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  }
+}

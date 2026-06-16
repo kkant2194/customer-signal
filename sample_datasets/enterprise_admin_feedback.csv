@@ -1,0 +1,11 @@
+source,customer,feedback,sentiment,rating,plan
+Sales call,Northstar Bio,"Admins need an audit trail for role changes before procurement will approve broader rollout.",negative,2,Enterprise
+Zendesk,MetroGrid,"Bulk permission changes require too many repetitive steps when onboarding a large department.",negative,1,Enterprise
+Intercom,Evergreen Legal,"The admin console should show who created each report and which evidence was used.",neutral,3,Enterprise
+Gong,Finch Robotics,"The customer wants exportable access logs for quarterly compliance reviews.",negative,2,Enterprise
+Email,Summit HR,"Workspace ownership transfer is confusing when the original product manager leaves the team.",negative,2,Business
+NPS,Juniper Cloud,"Saved reports are useful for leadership, but admins need stronger controls over who can edit them.",neutral,3,Enterprise
+Zendesk,Fieldstone,"Inviting 40 users worked, but mapping roles to departments took too long.",negative,2,Business
+Sales call,OrbitOps,"The buyer said admin analytics would help justify expansion to other business units.",positive,4,Enterprise
+Intercom,Vector Foods,"The account owner wants to archive old workspaces without deleting historical feedback.",neutral,3,Business
+G2,Stackline,"Permissions are understandable for small teams but become hard to manage after multiple workspaces.",negative,2,Enterprise

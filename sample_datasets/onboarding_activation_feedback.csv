@@ -1,0 +1,11 @@
+source,customer,feedback,sentiment,rating,plan
+Intercom,Harbor Analytics,"Trial admins could not find the activation checklist after creating a workspace. They needed support to explain the next setup step.",negative,2,Business
+Gong,Kite Retail,"The buyer imported feedback but did not invite teammates because the product did not explain why collaboration mattered during setup.",neutral,3,Enterprise
+NPS,Atlas Finance,"The onboarding checklist helped our team understand what was done and what still needed attention before launch.",positive,5,Business
+Zendesk,CedarWorks,"CSV upload failed because the required columns were unclear. The error message did not say which field was missing.",negative,2,Pro
+Sales call,Northstar Bio,"Security reviewers asked for clearer setup progress because the admin console did not show whether SSO validation was complete.",negative,2,Enterprise
+Email,Brightline,"The first report was useful, but the team wanted a clearer path from imported notes to a shareable roadmap summary.",neutral,3,Business
+Intercom,Nimbus Labs,"Users expected sample import templates before uploading a full CSV. They were worried about breaking their workspace.",negative,2,Pro
+G2,SignalForge,"The product made it easy to connect feedback sources, but the first analysis took too long to understand.",neutral,3,Business
+App Store,Bluepeak,"Mobile setup was straightforward, but notification defaults were too noisy for a new workspace.",negative,2,Pro
+NPS,Riverdesk,"Our PM created a workspace and had a useful theme summary in the same afternoon.",positive,5,Business

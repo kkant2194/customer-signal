@@ -1,0 +1,11 @@
+source,customer,feedback,sentiment,rating,plan
+Gong,Beacon Health,"The enterprise buyer said legal review is blocked because audit logs do not show who exported feedback evidence.",negative,2,Enterprise
+Zendesk,Northwind Capital,"Admins want a way to restrict saved reports to specific roles before they invite more product teams.",negative,2,Enterprise
+Intercom,SummitCloud,"The workspace setup was easy, but SSO validation status was unclear and support had to confirm it manually.",neutral,3,Enterprise
+Sales call,Rivergate Systems,"The VP of Product likes the evidence trail but needs SOC2 documentation linked inside the admin settings.",neutral,3,Enterprise
+NPS,Aster Financial,"Reports are useful for leadership reviews, but executives asked for a clearer confidence score on each theme.",neutral,3,Business
+Zendesk,Orion Logistics,"A manager deleted a workspace by mistake and expected all related feedback to disappear immediately.",negative,1,Business
+Email,HelioWorks,"The team asked for workspace-level retention controls before importing regulated customer notes.",negative,2,Enterprise
+G2,Bluebird Analytics,"The product saves PMs time when summarizing feedback for roadmap meetings.",positive,5,Business
+Intercom,VectorLab,"Role permissions are confusing because editors can still see reports from deleted workspaces.",negative,2,Enterprise
+Sales call,Kite Retail,"The customer said they would expand if reporting permissions and audit exports are finished this quarter.",neutral,3,Enterprise

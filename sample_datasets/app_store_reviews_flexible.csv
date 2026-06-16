@@ -1,0 +1,9 @@
+app_name,review_headline,review_text,stars,reviewer_name,platform,country,app_version,device,review_date
+Customer Signal Mobile,"Great summaries, slow sync","The theme summaries are helpful, but my saved reports took several minutes to appear on mobile after I created them on desktop.",3,"Priya S.","iOS App Store","US","1.8.2","iPhone 15","2026-05-21"
+Customer Signal Mobile,"Missing workspace filter","I need to filter feedback by workspace on mobile. Right now I have to open the web app to check enterprise accounts.",2,"Marcus T.","Google Play","UK","1.8.1","Pixel 9","2026-05-22"
+Customer Signal Mobile,"Useful for standups","I use the app before product standup to check yesterday's negative feedback. It is much faster than reading every ticket.",5,"Elena R.","iOS App Store","CA","1.8.2","iPhone 14","2026-05-23"
+Customer Signal Mobile,"Notifications are noisy","The app sends alerts for every imported row. I only want alerts for negative enterprise feedback.",2,"Jon A.","Google Play","US","1.8.1","Galaxy S25","2026-05-24"
+Customer Signal Mobile,"Report view is clean","Saved reports are easy to scan and the quote cards make leadership reviews less painful.",5,"Nadia K.","iOS App Store","AU","1.8.2","iPhone 16","2026-05-25"
+Customer Signal Mobile,"Login expired during import","I pasted feedback into the import screen and my session expired before I could save the preview.",1,"Owen B.","Google Play","US","1.8.1","Pixel 8","2026-05-26"
+Customer Signal Mobile,"Needs offline drafts","I take interview notes on flights and want to stage feedback offline, then sync when I reconnect.",3,"Lina C.","iOS App Store","DE","1.8.2","iPhone 15 Pro","2026-05-27"
+Customer Signal Mobile,"Search works well","Searching quotes inside feedback records is accurate and helps me find churn risks quickly.",4,"Samir P.","Google Play","IN","1.8.1","OnePlus 13","2026-05-28"

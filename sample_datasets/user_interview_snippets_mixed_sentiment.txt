@@ -1,0 +1,19 @@
+Maya from Harbor Analytics: The import preview makes me feel confident because I can catch column mistakes before saving anything.
+
+Jordan from Kite Retail: I like the Ask AI summary, but I do not trust it unless every quote links back to the exact original feedback.
+
+Priya from Atlas Finance: Workspace deletion is important for our team because we create temporary research spaces during discovery.
+
+Owen from Northstar Bio: The product feels promising, but setup is still confusing when I need to connect multiple feedback sources.
+
+Nadia from Brightline: Saved reports are useful for leadership meetings because the themes and recommended actions are already structured.
+
+Marcus from CedarWorks: I could not tell whether my CSV import failed because of formatting or because the required feedback column was missing.
+
+Elena from Riverdesk: The dashboard helps me see customer risk quickly, especially when negative enterprise feedback is separated from general notes.
+
+Samir from VectorLab: The column mapping workflow is helpful, but long column names make the import screen harder to scan.
+
+Lina from Nimbus Labs: I am neutral on the reports page right now. It works, but I need export or sharing before I use it weekly.
+
+Devon from SummitCloud: The feedback table filters are exactly what I need when I am preparing roadmap evidence for a specific workspace.

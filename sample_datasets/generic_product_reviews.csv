@@ -1,0 +1,9 @@
+review_title,review_body,stars,reviewer,marketplace,verified_purchase,helpful_votes,product_id,review_date
+"Battery lasts all week","I bought this for travel and the battery lasted through four long flights without needing a charge.",5,"A. Patel","Amazon US",true,18,"HP-1000","2026-05-01"
+"Setup app kept failing","The device worked after setup, but the mobile app crashed three times before pairing completed.",2,"M. Chen","Amazon US",true,42,"HP-1000","2026-05-03"
+"Great sound, weak case","The audio quality is excellent for the price, but the charging case feels flimsy and the lid is loose.",4,"R. Morgan","Amazon UK",true,9,"HP-1000","2026-05-04"
+"Stopped charging quickly","After two weeks the left earbud stopped charging. I cleaned the contacts but it still would not turn on.",1,"D. Lewis","Amazon US",true,67,"HP-1000","2026-05-06"
+"Comfortable for calls","The headset is comfortable for long work calls and people said my microphone sounded clear.",5,"S. Rivera","Amazon CA",false,11,"HP-1000","2026-05-09"
+"Notifications are confusing","The companion app sends too many battery warnings and I could not find a way to turn them off.",2,"J. Ahmed","Amazon US",true,24,"HP-1000","2026-05-11"
+"Good value overall","For the price this is a solid product. Noise cancellation is fine, though not as strong as premium brands.",4,"N. Brooks","Amazon US",true,7,"HP-1000","2026-05-12"
+"Replacement process was slow","Support approved a replacement, but the process took ten days and updates were unclear.",2,"K. Johnson","Amazon US",true,31,"HP-1000","2026-05-14"
