@@ -1,0 +1,26 @@
+review_id,product_name,reviewer_name,review_text,rating,source,plan,review_date
+REV-001,TaskFlow Pro,Aarav Mehta,"The dashboard is clean and easy to understand, but the mobile layout feels cramped when I review tasks on the go.",4,App Store,Pro,2026-05-02
+REV-002,TaskFlow Pro,Nisha Rao,"I lost my saved filters twice this week. It makes the reporting workflow feel unreliable for our weekly planning.",2,Support Ticket,Business,2026-05-03
+REV-003,TaskFlow Pro,Marcus Lee,"Setup was fast and the templates helped our team start tracking work immediately.",5,G2,Pro,2026-05-04
+REV-004,TaskFlow Pro,Sofia Chen,"The CSV import failed with a vague error message. I had to guess which column caused the issue.",2,Support Ticket,Business,2026-05-05
+REV-005,TaskFlow Pro,Daniel Brooks,"Notifications are useful, but I get too many duplicate alerts for the same task update.",3,Slack,Enterprise,2026-05-06
+REV-006,TaskFlow Pro,Priya Shah,"The new timeline view is excellent for sprint planning. It replaced two separate spreadsheets for us.",5,G2,Business,2026-05-07
+REV-007,TaskFlow Pro,Ethan Wilson,"Search results are inconsistent. Sometimes exact task titles do not appear unless I refresh the page.",2,Support Ticket,Pro,2026-05-08
+REV-008,TaskFlow Pro,Olivia Martinez,"I like the clean UI, but bulk editing tasks is still slower than expected for large projects.",3,App Store,Pro,2026-05-09
+REV-009,TaskFlow Pro,Hannah Kim,"Permissions are confusing. A viewer on my team was able to see a project draft they should not have accessed.",1,Support Ticket,Enterprise,2026-05-10
+REV-010,TaskFlow Pro,Rohan Iyer,"The product feels polished and reliable. Our team adopted it without much training.",5,G2,Business,2026-05-11
+REV-011,TaskFlow Pro,Emily Carter,"The export feature works, but the downloaded report formatting needs cleanup before sending to leadership.",3,Support Ticket,Business,2026-05-12
+REV-012,TaskFlow Pro,Noah Singh,"Recurring tasks are the main reason we switched. They work exactly how our operations team expected.",5,App Store,Pro,2026-05-13
+REV-013,TaskFlow Pro,Mei Tan,"The app becomes noticeably slow when a workspace has more than a few thousand tasks.",2,G2,Enterprise,2026-05-14
+REV-014,TaskFlow Pro,Carlos Rivera,"I wish comments supported better formatting. Long feedback threads are hard to scan.",3,Slack,Business,2026-05-15
+REV-015,TaskFlow Pro,Aisha Khan,"Customer support helped us fix our import issue quickly, but the product should have explained the problem clearly.",4,Support Ticket,Pro,2026-05-16
+REV-016,TaskFlow Pro,Liam Johnson,"The onboarding checklist made the first week smooth for our team.",5,App Store,Free,2026-05-17
+REV-017,TaskFlow Pro,Zara Ahmed,"Integrations with calendar tools are unreliable. Some task deadlines do not sync until hours later.",2,Support Ticket,Business,2026-05-18
+REV-018,TaskFlow Pro,Ben Cooper,"The analytics page gives useful visibility, but I need clearer definitions for each metric.",4,G2,Enterprise,2026-05-19
+REV-019,TaskFlow Pro,Grace Miller,"I could not find where to manage billing. The settings navigation feels scattered.",2,App Store,Pro,2026-05-20
+REV-020,TaskFlow Pro,Arjun Nair,"Great collaboration features. Mentions, assignments, and status updates keep everyone aligned.",5,Slack,Business,2026-05-21
+REV-021,TaskFlow Pro,Mia Thompson,"The product is useful, but empty states do not explain what to do next when a workspace has no tasks.",3,Support Ticket,Free,2026-05-22
+REV-022,TaskFlow Pro,Kenji Sato,"Audit logs are essential for us, but filtering them by user or project is too limited.",3,G2,Enterprise,2026-05-23
+REV-023,TaskFlow Pro,Isabella Rossi,"The mobile app crashes when I attach large screenshots to a task.",1,App Store,Pro,2026-05-24
+REV-024,TaskFlow Pro,Samir Patel,"The product has saved our project managers hours each week, especially with reusable workflows.",5,G2,Business,2026-05-25
+REV-025,TaskFlow Pro,Julia Evans,"I like the concept, but the learning curve is higher than expected for non-technical team members.",3,App Store,Free,2026-05-26
