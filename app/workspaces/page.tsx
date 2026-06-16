@@ -121,8 +121,15 @@ export default function WorkspacesPage() {
                 <Input id="workspace-name" value={name} onChange={(event) => setName(event.target.value)} placeholder="Expansion research" />
                 <Label htmlFor="product-area">Product area</Label>
                 <Input id="product-area" value={product} onChange={(event) => setProduct(event.target.value)} placeholder="Billing, mobile, admin..." />
-                <Label htmlFor="owner">Owner</Label>
-                <Input id="owner" value={owner} onChange={(event) => setOwner(event.target.value)} placeholder="Product manager" />
+                <Label htmlFor="workspace-owner">Owner</Label>
+                <Input
+                  id="workspace-owner"
+                  value={owner}
+                  onChange={(event) => setOwner(event.target.value)}
+                  placeholder="Product manager"
+                  autoComplete="off"
+                  spellCheck={false}
+                />
                 <Button className="w-full" disabled={saving} onClick={() => void handleCreate()}>
                   {saving ? "Creating..." : "Create workspace"}
                 </Button>
@@ -196,9 +203,9 @@ export default function WorkspacesPage() {
                 <div><div className="font-semibold">{workspace.feedbackCount.toLocaleString()}</div><div className="text-muted-foreground">Feedback</div></div>
                 <div><div className="font-semibold">{workspace.activeMembers}</div><div className="text-muted-foreground">Members</div></div>
               </div>
-              <div className="flex items-center justify-between rounded-md bg-muted/60 p-3 text-sm">
-                <span className="flex items-center gap-2"><Users className="h-4 w-4" /> Owner</span>
-                <span className="font-medium">{workspace.owner}</span>
+              <div className="flex items-center justify-between gap-3 rounded-md bg-muted/60 p-3 text-sm">
+                <span className="flex shrink-0 items-center gap-2"><Users className="h-4 w-4" /> Owner</span>
+                <span className="min-w-0 break-words text-right font-medium">{workspace.owner}</span>
               </div>
               <div className="text-xs text-muted-foreground">Last sync {workspace.lastSync}</div>
             </CardContent>
