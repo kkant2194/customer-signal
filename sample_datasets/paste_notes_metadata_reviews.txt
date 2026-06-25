@@ -1,0 +1,11 @@
+Anupama from Google Play Store: Very good. Easy to use, great variety of restaurants available. rating=5 sentiment=positive plan=business
+
+Restaurant Partner User from G2: The dashboard is user friendly and helps manage menus, customer reviews, and analytics. rating=4 sentiment=positive plan=business
+
+Verified Business User from Software Advice: The interface is clean, but taxes and platform fees are too high. rating=3 sentiment=neutral plan=business
+
+Vijay Padaganur from Google Play Store: I waited over 90 minutes and support could not give a clear update. rating=2 sentiment=negative plan=business
+
+Amit Arora from Trustpilot: The order was cancelled without a valid reason and the refund was delayed. rating=1 sentiment=negative plan=business
+
+Lala Sarthak Ray from Google Play Store: Missing items were refunded only to wallet credit, and the credit expired too quickly. rating=1 sentiment=negative plan=business

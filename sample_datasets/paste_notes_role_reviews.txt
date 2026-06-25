@@ -1,0 +1,11 @@
+Anupama (Consumer reviewer): The restaurant variety is great and the app is easy to use. Delivery tracking gives useful visibility.
+
+Vijay Padaganur (Consumer reviewer): Delivery took more than 90 minutes and the support experience did not provide clear updates.
+
+Restaurant Partner User (Restaurant operator): The dashboard makes it easy to update menu items, respond to customer reviews, and track performance.
+
+Verified Business User (Procurement reviewer): High delivery charges and platform fees make us compare prices with other platforms before ordering.
+
+Softonic Editorial (Editorial reviewer): Refund handling is slow because requests have to be manually filed and the response can take days.
+
+Gold Member (Loyalty customer): Clubbed orders delay delivery and reduce food freshness, which feels worse because Gold should provide a better experience.

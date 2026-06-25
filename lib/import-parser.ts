@@ -24,6 +24,13 @@ export interface ParsedCsvImport {
   previewRows: ImportPreviewRow[];
 }
 
+interface PastedSpeakerExtraction {
+  customer?: string;
+  company?: string;
+  role?: string;
+  feedback: string;
+}
+
 const fieldAliases: Record<keyof ColumnMapping, string[]> = {
   feedback: ["feedback", "review", "review_body", "body", "comment", "comments", "text", "message", "note", "notes", "excerpt", "description"],
   title: ["title", "review_title", "summary", "subject", "headline"],
@@ -35,24 +42,9 @@ const fieldAliases: Record<keyof ColumnMapping, string[]> = {
 };
 
 export function parsePastedFeedback(text: string): ImportPreviewRow[] {
-  return text
-    .split(/\n{2,}|\r?\n-/)
-    .map((chunk) => chunk.trim().replace(/^-/, "").trim())
-    .filter(Boolean)
-    .map((chunk) => {
-      const [possibleCustomer, ...rest] = chunk.split(":");
-      const hasCustomerPrefix = rest.length > 0 && possibleCustomer.length < 80;
-      const feedback = hasCustomerPrefix ? rest.join(":").trim() : chunk;
-
-      return normalizeImportRow(
-        {
-          source: "Pasted notes",
-          customer: hasCustomerPrefix ? possibleCustomer.trim() : "Unknown customer",
-          feedback
-        },
-        { feedback: "feedback", customer: "customer", source: "source" }
-      );
-    });
+  return splitPastedNotes(text)
+    .map((chunk, index) => parsePastedNoteChunk(chunk, index))
+    .filter((row): row is ImportPreviewRow => Boolean(row?.feedback));
 }
 
 export function parseCsvFile(file: File): Promise<ParsedCsvImport> {
@@ -144,6 +136,155 @@ function inferSource(row: RawImportRow) {
 
 function collectColumns(rows: RawImportRow[]) {
   return Array.from(new Set(rows.flatMap((row) => Object.keys(row))));
+}
+
+function splitPastedNotes(text: string) {
+  const normalized = text.replace(/\r\n/g, "\n").trim();
+  if (!normalized) return [];
+
+  const paragraphChunks = normalized
+    .split(/\n{2,}/)
+    .flatMap((chunk) => splitBulletLines(chunk));
+
+  return paragraphChunks
+    .map((chunk) => cleanupPastedChunk(chunk))
+    .filter((chunk) => chunk.length >= 8);
+}
+
+function splitBulletLines(chunk: string) {
+  const lines = chunk.split("\n");
+  const contentLines = lines.filter((line) => line.trim());
+  const bulletLines = lines.filter((line) => isBulletLine(line));
+
+  if (bulletLines.length >= 2 && bulletLines.length === contentLines.length) {
+    return bulletLines;
+  }
+
+  if (contentLines.length >= 2 && contentLines.every(looksLikePastedRecord)) {
+    return contentLines;
+  }
+
+  return [chunk];
+}
+
+function parsePastedNoteChunk(chunk: string, index: number): ImportPreviewRow | null {
+  const sourceMatch = chunk.match(/^#([\w-]+)\s*\/\s*/);
+  const source = sourceMatch ? titleCase(sourceMatch[1].replace(/-/g, " ")) : "Pasted notes";
+  const withoutSource = sourceMatch ? chunk.slice(sourceMatch[0].length).trim() : chunk;
+  const extracted = extractPastedSpeaker(withoutSource);
+  const feedback = cleanupPastedChunk(extracted.feedback);
+
+  if (!feedback) return null;
+
+  const customer = extracted.customer || "Unknown customer";
+  const metadata = {
+    paste_row: index + 1,
+    ...(extracted.company ? { company: extracted.company } : {}),
+    ...(extracted.role ? { role: extracted.role } : {}),
+    ...(sourceMatch ? { channel: sourceMatch[1] } : {})
+  };
+
+  return normalizeImportRow(
+    {
+      source,
+      customer,
+      title: buildPastedTitle(customer, feedback),
+      feedback,
+      ...extractInlineMetadata(withoutSource),
+      ...metadata
+    },
+    {
+      feedback: "feedback",
+      customer: "customer",
+      source: "source",
+      title: "title",
+      rating: "rating",
+      sentiment: "sentiment",
+      plan: "plan"
+    }
+  );
+}
+
+function extractPastedSpeaker(text: string): PastedSpeakerExtraction {
+  const colonIndex = text.indexOf(":");
+  if (colonIndex === -1 || colonIndex > 120) {
+    return { feedback: text };
+  }
+
+  const prefix = cleanupPastedChunk(text.slice(0, colonIndex));
+  const feedback = text.slice(colonIndex + 1).trim();
+  if (!prefix || !feedback || looksLikeSentence(prefix)) {
+    return { feedback: text };
+  }
+
+  const fromMatch = prefix.match(/^(.+?)\s+from\s+(.+)$/i);
+  if (fromMatch) {
+    return {
+      customer: fromMatch[1].trim(),
+      company: fromMatch[2].trim(),
+      feedback
+    };
+  }
+
+  const roleMatch = prefix.match(/^(.+?)\s+\((.+?)\)$/);
+  if (roleMatch) {
+    return {
+      customer: roleMatch[1].trim(),
+      role: roleMatch[2].trim(),
+      feedback
+    };
+  }
+
+  return {
+    customer: prefix,
+    feedback
+  };
+}
+
+function extractInlineMetadata(text: string): RawImportRow {
+  const metadata: RawImportRow = {};
+  const ratingMatch = text.match(/\b(?:rating|stars|score)\s*[:=]\s*([1-5])\b/i);
+  const sentimentMatch = text.match(/\b(?:sentiment|tone)\s*[:=]\s*(positive|negative|neutral|mixed)\b/i);
+  const planMatch = text.match(/\b(?:plan|tier)\s*[:=]\s*(enterprise|business|pro|free)\b/i);
+
+  if (ratingMatch) metadata.rating = Number(ratingMatch[1]);
+  if (sentimentMatch) metadata.sentiment = sentimentMatch[1];
+  if (planMatch) metadata.plan = planMatch[1];
+
+  return metadata;
+}
+
+function cleanupPastedChunk(chunk: string) {
+  return chunk
+    .trim()
+    .replace(/^[-*•]\s+/, "")
+    .replace(/^\d+[.)]\s+/, "")
+    .replace(/^["']|["']$/g, "")
+    .trim();
+}
+
+function isBulletLine(line: string) {
+  return /^\s*(?:[-*•]|\d+[.)])\s+\S/.test(line);
+}
+
+function looksLikePastedRecord(line: string) {
+  const trimmed = cleanupPastedChunk(line);
+  const colonIndex = trimmed.indexOf(":");
+  return colonIndex > 0 && colonIndex <= 120 && trimmed.length - colonIndex > 12;
+}
+
+function looksLikeSentence(text: string) {
+  return /\s/.test(text) && text.length > 48;
+}
+
+function buildPastedTitle(customer: string, feedback: string) {
+  const firstSentence = feedback.split(/[.!?]\s/)[0]?.trim();
+  const summary = firstSentence && firstSentence.length >= 12 ? firstSentence : feedback;
+  return `${customer}: ${summary}`.slice(0, 84);
+}
+
+function titleCase(value: string) {
+  return value.replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
 function normalizeColumnName(column: string) {
